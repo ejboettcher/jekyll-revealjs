@@ -1,5 +1,5 @@
 # Backgrounds
 
-{% background green %} 
+<background>green</background>
 
 Or use different backgrounds.
