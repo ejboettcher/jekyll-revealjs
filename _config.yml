@@ -52,13 +52,12 @@ subtitle        : "Revealjs-Jeykell"
 tesser          :
 logo            : 
 description: "Evelyn J. Boettcher CV"
-#baseurl: "/evelyn_j_boettcher_cv"
-#url: "https://ejboettcher.github.io"
-baseurl: ""
-url: "http://www.evelyn.boettcher.com"
-#repo: "/evelyn_j_boettcher_cv"
+baseurl: "/jekyll-revealjs"
+url: "https://ejboettcher.github.io"
+#baseurl: ""
+
 repo: ""
-repository: "evelyn_j_boettcher_cv/ejboettcher.github.io"
+repository: "jekyll-revealjs/ejboettcher.github.io"
 email: "evelyn.boettcher@gmail.com"
 header:
   overlay_image: ""
