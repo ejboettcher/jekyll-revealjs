@@ -143,3 +143,5 @@ reveal_options:
 reveal_dependencies:
 # Reveal.js subdirectory
 reveal_path: ../reveal.js/
+
+theme: jekyll-theme-minimal
