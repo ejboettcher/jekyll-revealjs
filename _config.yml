@@ -51,13 +51,10 @@ title_separator : "-"
 subtitle        : "Revealjs-Jeykell"
 tesser          :
 logo            : 
-description: "Evelyn J. Boettcher CV"
+description: "revealjs for jekyll site"
 baseurl: "/jekyll-revealjs"
 url: "https://ejboettcher.github.io"
-#baseurl: ""
-
-repo: ""
-repository: "jekyll-revealjs/ejboettcher.github.io"
+repository: "ejboettcher/jekyll-revealjs"
 email: "evelyn.boettcher@gmail.com"
 header:
   overlay_image: ""
