@@ -46,9 +46,9 @@ author:
 encoding: utf-8
 locale          : "en-US"
 lang            : en-US
-title           : "Revealjs-Jeykell"
+title           : "Revealjs-Jekyll"
 title_separator : "-"
-subtitle        : "Revealjs-Jeykell"
+subtitle        : "Revealjs-Jekyll"
 tesser          :
 logo            : 
 description: "revealjs for jekyll site"
@@ -140,4 +140,3 @@ reveal_dependencies:
 # Reveal.js subdirectory
 reveal_path: ../reveal.js/
 
-theme: jekyll-theme-minimal
