@@ -126,7 +126,8 @@ reveal_theme: black.css
 # The Reveal transition
 reveal_transition: default
 # Path to the used theme (defaults to the Reveal.js standard theme path)
-reveal_theme_path: ../reveal.js/dist/theme/
+#reveal_theme_path: ../reveal.js/dist/theme/
+reveal_theme_path: reveal.js/dist/theme/
 # Additional custom CSS paths
 extra_css: 
 # Custom CSS for highlighting (defaults to reveal.js/lib/css/zenburn.css)
@@ -138,5 +139,6 @@ reveal_options:
 # Additional reveal.js dependencies
 reveal_dependencies:
 # Reveal.js subdirectory
-reveal_path: ../reveal.js/
+#reveal_path: ../reveal.js/
+reveal_path: reveal.js/
 
