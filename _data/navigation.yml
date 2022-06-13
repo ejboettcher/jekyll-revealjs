@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "Home"
+    url: index
+  - title: "Example Reveal Slides"
+    url: slides
+  
+
+
+

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		{% if site.title %}<title>{{ site.title }}</title>{% endif %}
+		{% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="{{ site.reveal_path }}dist/reveal.css">
+		<link rel="stylesheet" href="{{ site.reveal_theme_path }}{{ site.reveal_theme }}" id="theme">
+{% if site.extra_css %}
+	{% for css_file in site.extra_css %}
+		<link rel="stylesheet" href="{{ css_file }}">
+	{% endfor %}
+{% endif %}
+
+		<!-- For syntax highlighting -->
+		{% if site.highlight_style_sheet %}
+			{% assign highlight_style_sheet = site.highlight_style_sheet %}
+		{% else %}
+			{% capture highlight_style_sheet %}{{ site.reveal_path }}plugin/highlight/zenburn.css {% endcapture %}
+		{% endif %}
+		<link rel="stylesheet" href="{{ highlight_style_sheet }}">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="{{ site.reveal_path }}css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.scss" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="{{ site.reveal_path }}lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+					<textarea data-template>
+{%
+
+						assign lines =  content  | newline_to_br | strip_newlines | split: "<br />"
+%}{%
+						for line in lines
+%}{%
+							assign processed_line = line
+								| replace:'<fragment/>','<!-- .element: class="fragment" -->'
+								| replace:'<background>','<!-- .slide: data-background="'
+								| replace:'</background>','" -->'
+								| replace:'<backgroundimage>','<!-- .slide: data-background="'
+								| replace:'</backgroundimage>','" --> '
+								| replace:'<backgroundimageopacity>','<!-- .slide: data-background-opacity="'
+								| replace:'</backgroundimageopacity>','" -->'
+%}{%
+							assign first_char = line | strip
+								| slice: 0,1
+%}{%
+							if first_char == '+'
+%}{%
+								assign processed_line = processed_line
+									| replace_first: '+','+ <!-- .element: class="fragment" -->'
+%}{%
+							endif
+							%}{{ processed_line }}{% comment %}Following line break is important{% endcomment %}
+{%
+						endfor
+%}
+					</textarea>
+				</section>
+				
+
+			</div>
+
+		</div>
+
+		<script src="{{ site.reveal_path }}dist/reveal.js"></script>
+		<script src="{{ site.reveal_path }}plugin/markdown/markdown.js"></script>
+		<script src="{{ site.reveal_path }}plugin/zoom/zoom.js"></script>
+		<script src="{{ site.reveal_path }}plugin/highlight/highlight.js"></script>
+		{% if site.reveal_notes_server %}
+			<script src="{{ site.reveal_path }}socketio/socket.io.js"></script>
+			<!-- The notes server is a stand-alone module and must be separately installed using npm.
+			     See https://github.com/reveal/notes-server for more details. -->
+			<script src="{{ site.reveal_path }}node_modules/reveal-notes-server/client.js"></script>
+		{% else %}
+			<script src="{{ site.reveal_path }}plugin/notes/notes.js"></script>
+		{% endif %}
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			let r = Reveal();
+			r.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: r.getQueryHash().theme, // available themes are in /css/theme
+				transition: '{{ site.reveal_transition }}', // default/cube/page/concave/zoom/linear/fade/none
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealNotes,
+                    RevealZoom,
+                ],
+
+				
+			});
+
+		</script>
+
+	</body>
+</html>
