@@ -1,11 +1,11 @@
 ## jekyll-reveal.js for Minimal Mistakes and Revealjs 4.3
 
 This jekyll-reveal.js works with a Minimal Mistakes jekyll template and Revealjs 4.3.  
-Example: [Evelyn's pyohio talk][https://www.evelynboettcher.com/pyohio-pandas#/]
+Example: [Evelyn's pyohio talk](https://www.evelynboettcher.com/pyohio-pandas#/)
 
 It is based on [jekyll-revealjs github repository](https://github.com/dploeger/jekyll-revealjs) which Jekyll-based framework for creating presentations based on Reveal.js and markdown.
 
-The main difference is that you can call which markdown files you want to include in what ever order for your slide show in a html files (Example: slides.html). You do not have to populate the *_post* folder nor use the naming conventions in the original instructions below. In addition, you can simple add a slide show to an existing jekyll layout, see [pyohio-pandas talk ][https://www.evelynboettcher.com].  
+The main difference is that you can call which markdown files you want to include in what ever order for your slide show in a html files (Example: slides.html). You do not have to populate the *_post* folder nor use the naming conventions in the original instructions below. In addition, you can simple add a slide show to an existing jekyll layout, see [pyohio-pandas talk ](https://www.evelynboettcher.com).  
 
 
 
