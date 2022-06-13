@@ -24,35 +24,33 @@ plugins:
 
 
 # Gem settings
-
-
 # Site Author
 author:
   name             : "Evelyn J Boettcher"
-  avatar           : "/assets/img/index/evelyn_boettcher_2022_3_4.png"
+  avatar           : 
   bio              : "Physicist and Founder"
   location         : "Dayton"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://www.didactex.com"
+      url: 
     - label: "GitHub"
       icon: "fas fa-code-branch"
-      url: "https://github.com/ejboettcher"
+      url: 
     - label: "Instructables"
       icon: "fas fa-file"
-      url: "https://www.instructables.com/member/Gem+City+Sewn/"
+      url: 
 
 
 # Site settings
 encoding: utf-8
 locale          : "en-US"
 lang            : en-US
-title           : "Evelyn J. Boettcher"
+title           : "Revealjs-Jeykell"
 title_separator : "-"
-subtitle        : "CV"
-tesser          : "/assets/img/logos/dayton_gearfilled@128px.png"
-logo            : "/assets/img/logos/dayton_gearfilled@128px.png"
+subtitle        : "Revealjs-Jeykell"
+tesser          :
+logo            : 
 description: "Evelyn J. Boettcher CV"
 #baseurl: "/evelyn_j_boettcher_cv"
 #url: "https://ejboettcher.github.io"
@@ -63,28 +61,78 @@ repo: ""
 repository: "evelyn_j_boettcher_cv/ejboettcher.github.io"
 email: "evelyn.boettcher@gmail.com"
 header:
-  overlay_image: "/assets/img/banner/green_painting.png"
-  caption: "Evelyn J. Boettcher"
-  image_description: "Green painting banner Image"
-#google_analytics: UA-92956541-1
+  overlay_image: ""
+  caption: ""
+  image_description: 
+#google_analytics: 
 css_inline: false
 markdown: kramdown
 highlighter: rouge
-markdown_ext: ignoreme
 kramdown:
   syntax_highlighter: rouge
   input: GFM
   auto_ids: true
 
+# Favicons
+favicons:
+    16: 
+    32:
+    64:
+    128:
+    256:
+    512:
+    1024:
+
+
+# Define collections
+
+# Analytics
+analytics:
+  provider    :  # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id : 
+    anonymize_ip: false
+
+
+# Collections
+collections:
+  slides:
+    output: true
+    permalink: /_reveal_slides/:path/
+
+
+# Defaults
+defaults:
+  # _reveal_slides
+  - scope:
+      path: ""
+      type: reveal_slides
+    values:
+      author_profile: false
+      read_time: false
+      share: false
+      related: false
+  
+
+
+
+
+# Liquid
+strict_front_matter: true
+liquid:
+  error_mode: strict
+
+
+## REVEALJS
 
 # The Reveal theme
 reveal_theme: black.css
 # The Reveal transition
 reveal_transition: default
 # Path to the used theme (defaults to the Reveal.js standard theme path)
-reveal_theme_path: reveal.js/dist/theme/
+reveal_theme_path: ../reveal.js/dist/theme/
 # Additional custom CSS paths
-extra_css:
+extra_css: 
 # Custom CSS for highlighting (defaults to reveal.js/lib/css/zenburn.css)
 highlight_style_sheet:
 # Embed Server-side speaker notes?
@@ -94,17 +142,4 @@ reveal_options:
 # Additional reveal.js dependencies
 reveal_dependencies:
 # Reveal.js subdirectory
-reveal_path: reveal.js/
-
-
-
-
-# Site Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/ejboettcher"
-
-
-
+reveal_path: ../reveal.js/

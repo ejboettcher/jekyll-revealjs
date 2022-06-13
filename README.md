@@ -1,6 +1,13 @@
-# jekyll-reveal.js
+## jekyll-reveal.js for Minimal Mistakes and Revealjs 4.3
 
-A Jekyll-based framework for creating presentations based on Reveal.js and markdown.
+This jekyll-reveal.js works with a Minimal Mistakes jekyll template and Revealjs 4.3.  
+Example: [Evelyn's pyohio talk][https://www.evelynboettcher.com/pyohio-pandas#/]
+
+It is based on [jekyll-revealjs github repository](https://github.com/dploeger/jekyll-revealjs) which Jekyll-based framework for creating presentations based on Reveal.js and markdown.
+
+The main difference is that you can call which markdown files you want to include in what ever order for your slide show in a html files (Example: slides.html). You do not have to populate the *_post* folder nor use the naming conventions in the original instructions below. In addition, you can simple add a slide show to an existing jekyll layout, see [pyohio-pandas talk ][https://www.evelynboettcher.com].  
+
+
 
 ## Introduction
 
@@ -18,8 +25,10 @@ First, [install Jekyll][]. After that, clone this repository and create a branch
 
 Clean the Example presentation:
 
-    git rm _posts/*
-    mkdir _posts
+    git rm _reveal_slides/*
+    mkdir _reveal_slides
+
+Or create a new folder.
 
 After that, add your slides into the _posts-subdirectory in clean Markdown syntax and you're ready to go with building your presentation with Jekyll:
 
@@ -33,18 +42,8 @@ You can even manage multiple presentations using the power of git. Simply branch
 
 ## Slide filenames
 
-Because we're using the Jekyll posts-framework to easily gather the slides for the presentation, we're bound to the conventions of Jekyll posts, namely being
-
-    <year>-<month>-<day>-<title>.md
-
-We recommend naming the files like
-
-    0000-01-01-welcome.md
-    0000-01-02-topics.md
-
-and so forth.
-
-Jekyll will assume, that each post has been made on the first of january, 2001 (which is of no interest for a presentation). The additional number is for sorting purposes. After that comes a title to identify the specific slide (which is actually only for the presentation author, Jekyll doesn't care about it).
+We're using the Jekyll framework to easily gather the slides for the presentation.
+All slides need to be written in markdown.
 
 ## Configuring the presentation
 
@@ -59,11 +58,16 @@ You can configure almost any reveal.js setting using the _config.yml-settings fi
 * reveal_dependencies: Additional reveal.js [dependencies][]
 * reveal_path: Path to the reveal.js-installation [reveal.js]
 
+
+### Tell Jekyll to Import your Folder
+If you are putting your slides into a folder other than *_reveal_slides* you will need to update your Collections and Defaults.
+
+
+
+## Custom reveal.js-themes
 You can also further customize the presentation:
 
 * extra_css: Additional CSS files added after the reveal theme []
-
-## Custom reveal.js-themes
 
 If you want to use your custom reveal.js-theme, we recommend adding a directory "theme", putting the file(s)
 there and referencing that directory in the configuration "reveal_theme_path".
@@ -108,24 +112,15 @@ Fragments allow slide elements to come one by one. This is often used in lists t
 fragments of a list during a presentation.
 
 To use fragments, jekyll-reveal.js includes a jekyll-plugin, that simplifies the use of fragments
-in markdown. To specify the current element as a fragment, use the {% fragment %}-tag like this:
+in markdown. To specify the current element as a fragment, use the *+* like this:
 
     # Slide
     
-    * This {% fragment %}
-    * will {% fragment %}
-    * come one by one {% fragment %}
+    + This 
+    + will 
+    + come one by one 
 
-### Slide backgrounds
 
-To modify the background of the current slide, jekyll-reveal.js also includes a simplification
-plugin:
-
-    # Slide
-    
-    {% background white %}
-    
-    This slide has a white background
 
 ### Speaker notes
 
