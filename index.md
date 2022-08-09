@@ -6,6 +6,7 @@ title: "jekyll-reveal.js for Minimal Mistakes and Revealjs 4.3"
 ---
 
 
+
 This jekyll-reveal.js works with a Minimal Mistakes jekyll template and Revealjs 4.3.
 <br>  
 Example: 
@@ -28,3 +29,21 @@ use the naming conventions in the original instructions. In addition,
 you can simple add a slide show to an existing jekyll layout, see 
 <a href="https://www.evelynboettcher.com/">pandas talk</a>.  
 
+
+### New Math Support 
+
+## Math Support
+###  The Lorenz Equations
+
+$$ \dot{x}  = \sigma(y-x) $$
+
+$$ \dot{y} =  \rho x - y - xz $$
+
+$$ \dot{z}  = -\beta z + xy $$
+
+### More Equations
+
+$$ J(\theta_0,\theta_1) = \sum_{i=0} $$
+
+## Math Support Reference
+https://www.xuningyang.com/blog/2021-01-11-katex-with-jekyll/
