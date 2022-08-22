@@ -27,8 +27,8 @@ First, [install Jekyll][]. After that, clone this repository and create a branch
 
 Clean the Example presentation:
 
-    git rm _reveal_slides/*
-    mkdir _reveal_slides
+    git rm _reveal-slides/*
+    mkdir _reveal-slides
 
 Or create a new folder.
 
